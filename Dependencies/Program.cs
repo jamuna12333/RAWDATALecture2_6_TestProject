@@ -10,6 +10,10 @@ namespace Dependencies
     {
         static void Main(string[] args)
         {
+            var controller = new Controller();
+            var person = controller.GetPerson(1);
+
+            Console.WriteLine(person);
         }
     }
 }

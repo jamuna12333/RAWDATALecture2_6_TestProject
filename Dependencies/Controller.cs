@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Dependencies
 {
@@ -12,11 +13,11 @@ namespace Dependencies
             _repository = new Repository(_connectionString);
         }
 
-        public PersonModel GetPerson(int id)
+        public string GetPerson(int id)
         {
             var person = _repository.GetPersonById(id);
 
-            return person;
+            return JsonConvert.SerializeObject(person);
         } 
     }
 }

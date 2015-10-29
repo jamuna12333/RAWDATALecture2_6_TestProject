@@ -13,6 +13,8 @@ namespace Dependencies
         public Database(string connectionString)
         {
             _connectionString = connectionString;
+
+            Console.WriteLine("ConnectionString: {0}", _connectionString);
         }
 
         public Person FindPerson(int id)
